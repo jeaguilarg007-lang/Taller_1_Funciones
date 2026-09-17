@@ -88,3 +88,33 @@ func sumarHastaN() {
 	fmt.Printf("La suma de los números del 1 al %d es: %d\n", n, suma)
 }
 
+func main() {
+	var opcion string
+
+	for {
+		fmt.Println("\n==================================")
+		fmt.Println("         MENÚ PRINCIPAL           ")
+		fmt.Println("==================================")
+		fmt.Println("1. Calcular promedio del curso")
+		fmt.Println("2. Sumar números de 1 a N")
+		fmt.Println("0 o salir. Salir del programa")
+		fmt.Print("Seleccione una opción: ")
+
+		fmt.Scan(&opcion)
+		opcion = strings.ToLower(opcion)
+
+		if opcion == "0" || opcion == "salir" {
+			fmt.Println("Saliendo del programa... ¡Hasta luego!")
+			break
+		}
+
+		switch opcion {
+		case "1":
+			procesarCurso()
+		case "2":
+			sumarHastaN()
+		default:
+			fmt.Println("Opción no válida. Intente nuevamente.")
+		}
+	}
+}
