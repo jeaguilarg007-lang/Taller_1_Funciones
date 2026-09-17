@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	
+	"strings"
 )
 
 // Opción 1: Función para calcular el promedio de las notas
